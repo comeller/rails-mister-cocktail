@@ -1,6 +1,7 @@
 <h1><%= @cocktail.name %></h1>
 <p><%=link_to "Back to list of cocktails", cocktails_path %></p>
 <p><%=link_to "Add recipe", new_cocktail_dose_path(@cocktail) %></p>
+<p> <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %> </p>
 <ul>
     <% @cocktail.doses.each do |dose| %>
     <li>
